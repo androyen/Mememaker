@@ -25,6 +25,26 @@ public class FileUtilities {
 
     public static void saveAssetImage(Context context, String assetName) {
 
+        //Create a file handle to use methods to handle files
+        File fileDirectory = context.getFilesDir();
+        //Create file inside fileDirectory named assetName
+        File fileToWrite = new File(fileDirectory, assetName);
+
+        AssetManager assetManager = context.getAssets();
+
+        //Create file streams to read and write
+        try {
+            InputStream in = assetManager.open(assetName);
+            FileOutputStream out = new FileOutputStream(fileToWrite);
+
+            //Close input and output streams
+            in.close();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     public static Uri saveImageForSharing(Context context, Bitmap bitmap,  String assetName) {
