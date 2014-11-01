@@ -30,6 +30,8 @@ public class FileUtilities {
         //Create file inside fileDirectory named assetName
         File fileToWrite = new File(fileDirectory, assetName);
 
+
+
         AssetManager assetManager = context.getAssets();
 
         //Create file streams to read and write
@@ -48,7 +50,7 @@ public class FileUtilities {
 
     }
 
-    //Reusable copy file method
+    //Reusable copy file method from input stream to output stream
     private static void copyFile(InputStream in, OutputStream out) throws IOException {
 
         //Read from the input stream to write to the outputstream
@@ -62,6 +64,26 @@ public class FileUtilities {
             //Write to the outputStream the buffer and the data
             out.write(buffer, 0, read);
         }
+    }
+
+    public static File[] listFiles(Context context) {
+        File fileDirectory = context.getFilesDir();
+        //Get and filter only jpg files
+        File[] filteredFiles = fileDirectory.listFiles(new FileFilter() {
+
+            @Override
+            public boolean accept(File file) {
+                if (file.getAbsolutePath().contains(".jpg")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+
+            }
+        });
+
+        return filteredFiles;
     }
 
     public static Uri saveImageForSharing(Context context, Bitmap bitmap,  String assetName) {
