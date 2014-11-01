@@ -52,7 +52,45 @@ public class FileUtilities {
 
     //refactor method
     public static File getFileDirectory(Context context) {
-        return context.getFilesDir();
+        String storageType = StorageType.INTERNAL;
+
+        //Only if
+        if(storageType.equals(StorageType.INTERNAL)) {
+
+            //return internal storage directory
+            return context.getFilesDir();
+        }
+        else {
+            if(isExternalStorageAvailable()) {
+
+                if(storageType.equals(StorageType.PRIVATE_EXTERNAL)) {
+                    //private external storage
+                    return context.getExternalFilesDir(null);
+                }
+                else {
+                    //public external storage
+                    return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                }
+            }
+            else {
+                return context.getFilesDir();
+            }
+        }
+
+
+
+    }
+
+    public static boolean isExternalStorageAvailable() {
+        //Get state of storage
+        String state = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(state)) {
+
+            //External storage is available on device
+            return true;
+        }
+        return false;
+
     }
 
     //Reusable copy file method from input stream to output stream
