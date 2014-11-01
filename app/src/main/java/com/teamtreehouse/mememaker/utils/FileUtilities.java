@@ -26,7 +26,7 @@ public class FileUtilities {
     public static void saveAssetImage(Context context, String assetName) {
 
         //Create a file handle to use methods to handle files
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         //Create file inside fileDirectory named assetName
         File fileToWrite = new File(fileDirectory, assetName);
 
@@ -50,6 +50,11 @@ public class FileUtilities {
 
     }
 
+    //refactor method
+    public static File getFileDirectory(Context context) {
+        return context.getFilesDir();
+    }
+
     //Reusable copy file method from input stream to output stream
     private static void copyFile(InputStream in, OutputStream out) throws IOException {
 
@@ -67,7 +72,7 @@ public class FileUtilities {
     }
 
     public static File[] listFiles(Context context) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         //Get and filter only jpg files
         File[] filteredFiles = fileDirectory.listFiles(new FileFilter() {
 
@@ -105,7 +110,7 @@ public class FileUtilities {
 
 
     public static void saveImage(Context context, Bitmap bitmap, String name) {
-        File fileDirectory = context.getFilesDir();
+        File fileDirectory = getFileDirectory(context);
         File fileToWrite = new File(fileDirectory, name);
 
         try {

@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5df19f16-d91d-413e-aa79-e1fd72397262" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/fragments/ImageGridFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/fragments/ImageGridFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MemeMaker.iws" />
@@ -58,23 +57,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUtilities.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FileUtilities.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1695">
-              <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.24347825" vertical-offset="625" max-vertical-offset="1770">
+              <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
               <folding>
-                <element signature="e#2127#2429#0" expanded="true" />
-                <element signature="e#2418#2419#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#2261#2563#0" expanded="true" />
+                <element signature="e#2552#2553#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageGridFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ImageGridFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/fragments/ImageGridFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44347826" vertical-offset="510" max-vertical-offset="1470">
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1470">
               <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
               <folding />
             </state>
@@ -777,8 +778,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/database/MemeDataSource.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/database/MemeDatasource.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_meme.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/fragments/ImageGridFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java" />
       </list>
     </option>
   </component>
@@ -1277,6 +1278,11 @@
       <created>1408932784716</created>
       <updated>1408932784716</updated>
     </task>
+    <task id="LOCAL-00001" summary="DIsplay Images in Grid. Add listFiles() method in FileUtilities">
+      <created>1414866170410</created>
+      <updated>1414866170410</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1328,6 +1334,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="DIsplay Images in Grid. Add listFiles() method in FileUtilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="DIsplay Images in Grid. Add listFiles() method in FileUtilities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1634,13 +1642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03125" vertical-offset="75" max-vertical-offset="555">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/activities/CreateMemeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="843" max-vertical-offset="2415">
@@ -1680,22 +1681,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1695">
-          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
-          <folding>
-            <element signature="e#2127#2429#0" expanded="true" />
-            <element signature="e#2418#2419#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.15652174" vertical-offset="0" max-vertical-offset="575">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/ui/fragments/ImageGridFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44347826" vertical-offset="510" max-vertical-offset="1470">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1470">
           <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamtreehouse/mememaker/utils/FileUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24347825" vertical-offset="625" max-vertical-offset="1770">
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding>
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#2261#2563#0" expanded="true" />
+            <element signature="e#2552#2553#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
