@@ -10,4 +10,13 @@ import com.teamtreehouse.mememaker.R;
  */
 public class MemeSettingsFragment extends PreferenceFragment {
 
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //Set Settings layout
+        addPreferencesFromResource(R.xml.preferences); //Need to set default values
+
+    }
 }
