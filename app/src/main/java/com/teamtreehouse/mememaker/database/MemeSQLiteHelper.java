@@ -21,6 +21,23 @@ public class MemeSQLiteHelper extends SQLiteOpenHelper {
             COLUMN_MEME_ASSET + " TEXT," + COLUMN_MEME_NAME +" TEXT)";
 
     //Meme Table Annotations functionality
+    //Meme Table Annotations functionality
+    public static final String ANNOTATIONSTABLE = "ANNOTATIONS";
+    public static final String COLUMNANNOTATIONCOLOR = "COLOR";
+    public static final String COLUMNANNOTATIONX = "X";
+    public static final String COLUMNANNOTATIONY = "Y";
+    public static final String COLUMNANNOTATIONTITLE = "TITLE";
+    public static final String COLUMNFOREIGNKEYMEME = "MEME_ID";
+
+
+    private static final String CREATEANNOTATIONS = "CREATE TABLE " + ANNOTATIONSTABLE + " (" +
+            BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            COLUMNANNOTATIONX + " INTEGER, " +
+            COLUMNANNOTATIONY + " INTEGER, " +
+            COLUMNANNOTATIONTITLE + " TEXT, " +
+            COLUMNANNOTATIONCOLOR + " TEXT, " +
+            COLUMNFOREIGNKEYMEME + " INTEGER, " +
+            "FOREIGN KEY(" + COLUMNFOREIGNKEYMEME + ") REFERENCES MEMES(_ID))";
 
     public MemeSQLiteHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -30,6 +47,7 @@ public class MemeSQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //Create database schema for first time
         db.execSQL(CREATE_MEMES);
+        db.execSQL(CREATEANNOTATIONS);
 
     }
 

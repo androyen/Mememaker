@@ -22,5 +22,25 @@ public class MemeDatasource {
 
     public MemeDatasource(Context context) {
         mContext = context;
+        mMemeSqlLiteHelper = new MemeSQLiteHelper(context);
+    }
+
+    public void create(Meme meme) {
+        //Read Write database operations
+        SQLiteDatabase database = open();
+        database.beginTransaction();
+
+        //Implement transaction
+
+        database.setTransactionSuccessful();
+        close(database);
+    }
+
+    private SQLiteDatabase open() {
+       return mMemeSqlLiteHelper.getWritableDatabase();
+    }
+
+    private void close(SQLiteDatabase database) {
+        database.close();
     }
 }
